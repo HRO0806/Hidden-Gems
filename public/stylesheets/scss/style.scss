@@ -1,0 +1,89 @@
+$primaryColor: #fc192c;
+$secondaryColor: #1e6398;
+$thirdColor: #1f1f20;
+$textColor: #cacaca;
+$goldColor: #9b6c19;
+
+body {
+    background-color: $primaryColor;
+    margin: 0;
+}
+
+.page-header {
+    background-color: $secondaryColor;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0;
+    h1 {
+        color: $thirdColor;
+        padding-bottom: 15px;
+        font-size: 50px;
+        text-decoration: underline $goldColor;
+    }
+}
+
+#marketing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.homepage-card {
+    margin: 3px;
+}
+
+#phone {
+    width: 500px;
+    height: 650px;
+    display: inline;
+}
+
+#drink {
+    width: 500px;
+    height: 650px;
+    display: inline;
+}
+
+#info {
+    background-color: $thirdColor;
+    color: $textColor;
+    width: 500px;
+    height: 630px;    
+    padding: 10px;
+    h2{
+        font-size: 40px;
+    }
+    p{
+        font-size: 25px;
+    }
+    #login {
+        margin-bottom: .01px;
+    } 
+    button {
+        margin: 2px;
+        background-color: $secondaryColor;
+        border: #000000 solid 2px;
+        width: 95px;
+        height: 50px;
+    }
+    button:hover {
+        background-color: $goldColor;
+    }
+}
+
+.page-footer {
+    background-color: $secondaryColor;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+    p{
+        display: inline;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
