@@ -1,0 +1,69 @@
+body {
+  background-color: #fc192c;
+  margin: 0; }
+
+.page-header {
+  background-color: #1e6398;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 0; }
+  .page-header h1 {
+    color: #1f1f20;
+    padding-bottom: 15px;
+    font-size: 50px;
+    text-decoration: underline #9b6c19; }
+
+#marketing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-around; }
+
+.homepage-card {
+  margin: 3px; }
+
+#phone {
+  width: 500px;
+  height: 650px;
+  display: inline; }
+
+#drink {
+  width: 500px;
+  height: 650px;
+  display: inline; }
+
+#info {
+  background-color: #1f1f20;
+  color: #cacaca;
+  width: 500px;
+  height: 630px;
+  padding: 10px; }
+  #info h2 {
+    font-size: 40px; }
+  #info p {
+    font-size: 25px; }
+  #info #login {
+    margin-bottom: .01px; }
+  #info button {
+    margin: 2px;
+    background-color: #1e6398;
+    border: #000000 solid 2px;
+    width: 95px;
+    height: 50px; }
+  #info button:hover {
+    background-color: #9b6c19; }
+
+.page-footer {
+  background-color: #1e6398;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-around; }
+  .page-footer p {
+    display: inline; }
+  .page-footer a {
+    text-decoration: none;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
