@@ -8,6 +8,32 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- getting user location -->
+    <script>
+    if('geolocation' in navigator){
+        navigator.geolocation.getCurrentPosition((position => {
+            const lat = position.coords.latitude
+            const lon = position.coords.longitude
+            const data = { lat, lon }
+
+            console.log(data);
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            };
+            fetch('/', options);
+        }));
+
+        console.log('geolocation available');
+    } else {
+        console.log('geolocation is not available');
+
+    }
+    </script>
     <header class="page-header">
             <h1>Hidden Gems</h1>
     </header>
