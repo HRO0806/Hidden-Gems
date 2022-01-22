@@ -1,5 +1,0 @@
--- DROP DATABASE
-DROP DATABASE IF EXISTS hiddengems_db;
-
--- CREATE DATABASE
-CREATE DATABASE hiddengems_db;
