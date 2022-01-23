@@ -13,7 +13,6 @@ body {
     background-color: $secondaryColor;
     text-align: center;
     padding-top: 10px;
-    margin-bottom: 0;
     h1 {
         color: $thirdColor;
         padding-bottom: 15px;
@@ -48,7 +47,7 @@ body {
 #info {
     background-color: $thirdColor;
     color: $textColor;
-    width: 500px;
+    width: 477px;
     height: 630px;    
     padding: 10px;
     h2{
@@ -58,7 +57,7 @@ body {
         font-size: 25px;
     }
     #login {
-        margin-bottom: .01px;
+        margin-bottom: .001px;
     } 
     button {
         margin: 2px;
@@ -79,6 +78,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: space-around;
+    margin-bottom: -500px;
+    padding-bottom: 3px;
     p{
         display: inline;
     }
