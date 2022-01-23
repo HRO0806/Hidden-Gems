@@ -4,7 +4,6 @@ const express = require('express');
 // import sequelize connection
 const sequelize = require('./config/connection');
 const axios = require('axios');
-const NodeGeocoder = require('node-geocoder');
 const exphbs = require('express-handlebars');
 
 const app = express();
@@ -16,7 +15,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(routes);
