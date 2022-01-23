@@ -5,8 +5,7 @@ body {
 .page-header {
   background-color: #1e6398;
   text-align: center;
-  padding-top: 10px;
-  margin-bottom: 0; }
+  padding-top: 10px; }
   .page-header h1 {
     color: #1f1f20;
     padding-bottom: 15px;
@@ -35,7 +34,7 @@ body {
 #info {
   background-color: #1f1f20;
   color: #cacaca;
-  width: 500px;
+  width: 477px;
   height: 630px;
   padding: 10px; }
   #info h2 {
@@ -43,7 +42,7 @@ body {
   #info p {
     font-size: 25px; }
   #info #login {
-    margin-bottom: .01px; }
+    margin-bottom: .001px; }
   #info button {
     margin: 2px;
     background-color: #1e6398;
@@ -59,7 +58,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-bottom: -500px;
+  padding-bottom: 3px; }
   .page-footer p {
     display: inline; }
   .page-footer a {
