@@ -1,6 +1,4 @@
-const express = require('express');
 const axios = require('axios').default;
-const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -35,10 +33,5 @@ const getRestaurants = function() {
           console.error(error);
       });
 }
-
-
-sequelize.sync({ force: true }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  });
 
 module.exports = { getRestaurants, };

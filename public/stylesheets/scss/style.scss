@@ -5,19 +5,37 @@ $textColor: #cacaca;
 $goldColor: #9b6c19;
 
 body {
-    background-color: $primaryColor;
+    background-color: #ffffff;
     margin: 0;
 }
 
 .page-header {
-    background-color: $secondaryColor;
-    text-align: center;
+    background-color: $textColor;
     padding-top: 10px;
+    width: 100%;
     h1 {
-        color: $thirdColor;
+        background-image: linear-gradient(to right, $secondaryColor, $thirdColor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;          
         padding-bottom: 15px;
         font-size: 50px;
         text-decoration: underline $goldColor;
+        display: inline;
+        margin-left: 10px;
+    }
+    button{
+        width: 100px;
+        height: 50px;
+        margin-bottom: 10px;
+        margin-left: 70px;
+        background-color: $thirdColor;
+        color: $textColor;
+        float: right;
+        margin-right: 10px;
+    }
+    button:hover{
+        background-color: $textColor;
+        color: $thirdColor;
     }
 }
 
@@ -26,6 +44,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: space-around;
+    margin-top: 35px;
 }
 
 .homepage-card {
@@ -71,6 +90,43 @@ body {
     }
 }
 
+.login-signup-form{
+    width: 500px;
+    height: 650px;
+    padding: 21px;
+    text-align: center;
+    background-color: $thirdColor;
+    color: $textColor;
+    margin-top: 10px;
+    input{
+        width: 300px;
+        height: 20px;
+        margin-top: 15px;
+    }
+    .button-space{
+        margin-bottom: 15px;
+    }
+    .login{
+        margin-bottom: 25px;
+    }
+    #secure-info{
+        background-color: $textColor;
+        color: $thirdColor;
+        margin-top: 10px;
+        height: 320px;
+        width: 100%;;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        p{
+            font-size: 40px;
+        }
+        img{
+            height: 175px;
+        }
+    }
+}
+
 .page-footer {
     background-color: $secondaryColor;
     color: white;
@@ -78,9 +134,12 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: space-around;
-    margin-bottom: -500px;
-    padding-bottom: 3px;
+    margin-top: 0;
+    margin-bottom: auto;
+    padding-bottom: px;
     width: 100%;
+    position: fixed;
+    bottom: 0;
     p{
         display: inline;
     }
