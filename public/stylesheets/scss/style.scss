@@ -150,11 +150,17 @@ body {
         width: 100px;
         height: 30px;
         background-color: $textColor;
-        color: $thirdColor;
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+        }
     }
     button:hover{
         background-color: $darkGrey;
-        color: $textColor;
+        a{
+            color: $textColor;
+            text-decoration: none;  
+        }
     }
 }
 
@@ -169,13 +175,16 @@ body {
         color: $textColor;
     }
     textarea{
-        width: 430px;
+        width: 395px;
         resize: none;
     }
     button{
         background-color: $secondaryColor;
         color:$textColor;
         width: 75px;
+    }
+    button:hover{
+        color: $thirdColor;
     }
 }
 
@@ -189,9 +198,10 @@ body {
     p{
         background-color: $textColor;
         color: $thirdColor;
-        width: 430px;
+        width: 395px;
         padding: 10px;
         padding-right: .01px;
+        margin-top: 15px;
     }
 }
 
