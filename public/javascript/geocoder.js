@@ -37,8 +37,8 @@ const getRestaurants = function() {
 }
 
 
-sequelize.sync({ force: true }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  });
+// sequelize.sync({ force: true }).then(() => {
+//     app.listen(PORT, () => console.log('Now listening'));
+//   });
 
 module.exports = { getRestaurants, };
