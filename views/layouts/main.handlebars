@@ -11,11 +11,11 @@
 <body>
     <header class="page-header">
         <div id='header-items'>    
-            <h1>Hidden Gems</h1>
+            <h1><a href="/">Hidden Gems</a></h1>
             {{#if loggedIn}}
             <button>Logout</button>
             {{else}}
-            <button>Login</button>       
+            <button><a href="/login">Login</a></button>       
             {{/if}}
         </div>
     </header>
@@ -27,7 +27,7 @@
         {{#if loggedIn}}
         <p>logout</p>
         {{else}}
-        <button>login</button>
+        <p><a href="/login">Login</a></p>
         {{/if}}
     </footer>
     <script type="text/javascript" src="./javascript/userLocation.js"></script>
