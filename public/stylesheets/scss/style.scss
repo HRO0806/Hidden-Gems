@@ -4,6 +4,8 @@ $thirdColor: #1f1f20;
 $textColor: #cacaca;
 $goldColor: #9b6c19;
 $darkGrey: #656D74;
+$darkWhite: #737373;
+$Grey: #494949;
 
 body {
     background-color: #ffffff;
@@ -39,9 +41,9 @@ body {
         }
     }
     button:hover{
-        background-color: $textColor;
+        background-color: $darkGrey;
         a{
-            color: $thirdColor;
+            color: $textColor;
             text-decoration: none;
         }
     }
@@ -88,13 +90,21 @@ body {
     } 
     button {
         margin: 2px;
-        background-color: $secondaryColor;
+        background-color: $darkWhite;
         border: #000000 solid 2px;
         width: 95px;
         height: 50px;
+        a{
+            color: $textColor;
+            text-decoration: none;
+        }
     }
     button:hover {
-        background-color: $goldColor;
+        background-color: $darkGrey;
+        a{
+            color: $textColor;
+            text-decoration: none;
+        }
     }
 }
 
@@ -140,11 +150,58 @@ body {
         width: 100px;
         height: 30px;
         background-color: $textColor;
-        color: $thirdColor;
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+        }
     }
     button:hover{
         background-color: $darkGrey;
+        a{
+            color: $textColor;
+            text-decoration: none;  
+        }
+    }
+}
+
+.make-post{
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: $Grey;
+    padding: 20px;
+    width: 435px;
+    label{
+        display: block;
         color: $textColor;
+    }
+    textarea{
+        width: 395px;
+        resize: none;
+    }
+    button{
+        background-color: $secondaryColor;
+        color:$textColor;
+        width: 75px;
+    }
+    button:hover{
+        color: $thirdColor;
+    }
+}
+
+.post{
+    background-image: linear-gradient(to right, $secondaryColor, $thirdColor);
+    margin-top: 15px;
+    padding: 20px;
+    width: 435px;
+    margin-left: 15px;
+    text-align: center;
+    p{
+        background-color: $textColor;
+        color: $thirdColor;
+        width: 395px;
+        padding: 10px;
+        padding-right: .01px;
+        margin-top: 15px;
     }
 }
 

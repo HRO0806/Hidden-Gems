@@ -28,9 +28,9 @@ body {
       color: #cacaca;
       text-decoration: none; }
   .page-header button:hover {
-    background-color: #cacaca; }
+    background-color: #656D74; }
     .page-header button:hover a {
-      color: #1f1f20;
+      color: #cacaca;
       text-decoration: none; }
 
 #marketing {
@@ -67,12 +67,18 @@ body {
     margin-bottom: .001px; }
   #info button {
     margin: 2px;
-    background-color: #1e6398;
+    background-color: #737373;
     border: #000000 solid 2px;
     width: 95px;
     height: 50px; }
+    #info button a {
+      color: #cacaca;
+      text-decoration: none; }
   #info button:hover {
-    background-color: #9b6c19; }
+    background-color: #656D74; }
+    #info button:hover a {
+      color: #cacaca;
+      text-decoration: none; }
 
 .login-signup-form {
   width: 500px;
@@ -108,11 +114,49 @@ body {
   .login-signup-form button {
     width: 100px;
     height: 30px;
-    background-color: #cacaca;
-    color: #1f1f20; }
+    background-color: #cacaca; }
+    .login-signup-form button a {
+      color: #1f1f20;
+      text-decoration: none; }
   .login-signup-form button:hover {
-    background-color: #656D74;
+    background-color: #656D74; }
+    .login-signup-form button:hover a {
+      color: #cacaca;
+      text-decoration: none; }
+
+.make-post {
+  margin-left: 15px;
+  margin-top: 20px;
+  background-color: #494949;
+  padding: 20px;
+  width: 435px; }
+  .make-post label {
+    display: block;
     color: #cacaca; }
+  .make-post textarea {
+    width: 395px;
+    resize: none; }
+  .make-post button {
+    background-color: #1e6398;
+    color: #cacaca;
+    width: 75px; }
+  .make-post button:hover {
+    color: #1f1f20; }
+
+.post {
+  background-image: linear-gradient(to right, #1e6398, #1f1f20);
+  margin-top: 15px;
+  padding: 20px;
+  width: 435px;
+  margin-left: 15px;
+  text-align: center; }
+  .post p {
+    background-color: #cacaca;
+    color: #1f1f20;
+    width: 395px;
+    padding: 10px;
+    padding-right: .01px;
+    margin-top: 15px; }
 
 .page-footer {
   background-color: #1e6398;
