@@ -4,7 +4,8 @@ const sequelize = require('sequelize');
 const getRestaurants = require('../../public/javascript/geocoder');
 
 router.post('/', (req, res) => {
-   console.log(getRestaurants(req));
+   const userCoords = req.body;
+   console.log(getRestaurants(userCoords));
 });
 
 module.exports = router;
