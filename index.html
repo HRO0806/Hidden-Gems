@@ -7,32 +7,59 @@
     <link rel="stylesheet" type="text/css" href="public/stylesheets/css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body>  
     <header class="page-header">
-            <h1>Hidden Gems</h1>
+        <h1>Hidden Gems</h1>
+        <button>Login</button>         
     </header>
-    <div id="marketing">
-        <img id="phone" class="homepage-card" src="images/hidden-gems.jpg" alt="Guy found a couple hidden gems">   
-        <div id="info" class="homepage-card">
-            <h2>What is Hidden Gems?</h2>
-            <p>Hidden Gems is service that helps 
-                users to experience their
-                vacation as if they were a local.</p>
-            <h2>How do we make this happen?</h2>
-            <p>We use software similar to a GPS and
-                combine it with the recommendations of 
-                real people who live in the area.</p>
-            <h2>How do I get started?</h2>
-            <p id="login">You can log in by clicking the button below.</p>
-            <button>Login/Signup</button>
+    <div class="login-signup-form">
+        <div class='login'>
+            <form class="login-form">
+                <div>
+                    <label for="email-login">email:</label>
+                    <input type="text" id="email-login"/>
+                </div>
+                <div>
+                    <label for="password-login" class="input">password:</label>
+                    <input type="password" id="password-login" class="input button-space"/>
+                </div>
+                <div class="input">
+                    <button type="submit" class="input">login</button>
+                </div>
+            </form>
+          </div>
+          
+          <div class='sign-up'>
+            <form class="signup-form">
+                <div>
+                    <label for="username-signup" class="input">username:</label>
+                    <input type="text" id="username-signup" class="input"/>
+                </div>
+                <div>
+                    <label for="email-signup" class="input">email:</label>
+                    <input type="text" id="email-signup" class="input"/>
+                </div>
+                <div>
+                    <label for="password-signup" class="input">password:</label>
+                    <input type="password" id="password-signup" class="input button-space"/>
+                </div>
+                <div>
+                    <button type="submit" class="input">signup</button>
+                </div>
+            </form>
         </div>
-        <img id="drink" class="homepage-card" src="images/drink.jpg" alt="Fun drink">       
+        <div id="secure-info">
+            <p>No need to worry!<br> 
+            you information is secure.</p>
+            <img id="thumbs-up" src="public/images/jim.gif">
+        </div>  
+          <script src="/javascript/login.js"></script>
     </div>
     <footer class="page-footer">
         <p><a href="https://www.ebay.com/itm/Crafting-with-Cat-Hair-Cute-Handicrafts-to-Make-with-Your-Cat-By-Tsutaya-K/322539549387?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338181172&customid=&toolid=10001&mkevt=1" target="_blank">Click here for some fun!</a></p>
         <p><a href="https://explore.org/livecams/dog-bless-you/service-puppy-cam-3" target="_blank">Click here for something cute</a></p>
         <p>Our privacy policy</p>
-        <p>Login/Signup</p>
+        <p>Login</p>
     </footer>
     <script type="text/javascript" src="public/javascript/userLocation.js"></script>
 </body>
