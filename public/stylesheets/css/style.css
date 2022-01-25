@@ -24,9 +24,14 @@ body {
     color: #cacaca;
     float: right;
     margin-right: 10px; }
+    .page-header button a {
+      color: #cacaca;
+      text-decoration: none; }
   .page-header button:hover {
-    background-color: #cacaca;
-    color: #1f1f20; }
+    background-color: #cacaca; }
+    .page-header button:hover a {
+      color: #1f1f20;
+      text-decoration: none; }
 
 #marketing {
   display: flex;
@@ -51,8 +56,8 @@ body {
 #info {
   background-color: #1f1f20;
   color: #cacaca;
-  width: 477px;
-  height: 630px;
+  width: 500px;
+  height: 650px;
   padding: 10px; }
   #info h2 {
     font-size: 40px; }
@@ -76,7 +81,7 @@ body {
   text-align: center;
   background-color: #1f1f20;
   color: #cacaca;
-  margin-top: 10px; }
+  margin-top: 15px; }
   .login-signup-form input {
     width: 300px;
     height: 20px;
@@ -85,10 +90,12 @@ body {
     margin-bottom: 15px; }
   .login-signup-form .login {
     margin-bottom: 25px; }
+  .login-signup-form .sign-up {
+    margin-bottom: 0; }
   .login-signup-form #secure-info {
     background-color: #cacaca;
     color: #1f1f20;
-    margin-top: 10px;
+    margin-top: 3px;
     height: 320px;
     width: 100%;
     text-align: center;
@@ -98,6 +105,14 @@ body {
       font-size: 40px; }
     .login-signup-form #secure-info img {
       height: 175px; }
+  .login-signup-form button {
+    width: 100px;
+    height: 30px;
+    background-color: #cacaca;
+    color: #1f1f20; }
+  .login-signup-form button:hover {
+    background-color: #656D74;
+    color: #cacaca; }
 
 .page-footer {
   background-color: #1e6398;

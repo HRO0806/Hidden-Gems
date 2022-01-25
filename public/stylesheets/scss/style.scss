@@ -3,6 +3,7 @@ $secondaryColor: #1e6398;
 $thirdColor: #1f1f20;
 $textColor: #cacaca;
 $goldColor: #9b6c19;
+$darkGrey: #656D74;
 
 body {
     background-color: #ffffff;
@@ -32,10 +33,17 @@ body {
         color: $textColor;
         float: right;
         margin-right: 10px;
+        a {
+            color: $textColor;
+            text-decoration: none;
+        }
     }
     button:hover{
         background-color: $textColor;
-        color: $thirdColor;
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+        }
     }
 }
 
@@ -66,8 +74,8 @@ body {
 #info {
     background-color: $thirdColor;
     color: $textColor;
-    width: 477px;
-    height: 630px;    
+    width: 500px;
+    height: 650px;    
     padding: 10px;
     h2{
         font-size: 40px;
@@ -97,7 +105,7 @@ body {
     text-align: center;
     background-color: $thirdColor;
     color: $textColor;
-    margin-top: 10px;
+    margin-top: 15px;
     input{
         width: 300px;
         height: 20px;
@@ -109,10 +117,13 @@ body {
     .login{
         margin-bottom: 25px;
     }
+    .sign-up{
+        margin-bottom: 0;
+    }
     #secure-info{
         background-color: $textColor;
         color: $thirdColor;
-        margin-top: 10px;
+        margin-top: 3px;
         height: 320px;
         width: 100%;;
         text-align: center;
@@ -124,6 +135,16 @@ body {
         img{
             height: 175px;
         }
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        background-color: $textColor;
+        color: $thirdColor;
+    }
+    button:hover{
+        background-color: $darkGrey;
+        color: $textColor;
     }
 }
 
