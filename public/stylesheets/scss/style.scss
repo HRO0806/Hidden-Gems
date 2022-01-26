@@ -164,44 +164,126 @@ body {
     }
 }
 
-.make-post{
-    margin-left: 15px;
-    margin-top: 20px;
-    background-color: $Grey;
-    padding: 20px;
-    width: 435px;
-    label{
-        display: block;
-        color: $textColor;
+.post-page-content{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    ul{
+        list-style-type: none;
     }
+}
+
+.search-bar{
+    float: right;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-left: 75px;
+    display: block;
+    width: 500px;
     textarea{
-        width: 395px;
+        width: 500px;
         resize: none;
+        height: 30px;
     }
     button{
-        background-color: $secondaryColor;
-        color:$textColor;
-        width: 75px;
+        background-color: $thirdColor;
+        color: $textColor;
     }
     button:hover{
+        background-color: $textColor;
         color: $thirdColor;
     }
 }
 
-.post{
+#restraunt{
     background-image: linear-gradient(to right, $secondaryColor, $thirdColor);
-    margin-top: 15px;
-    padding: 20px;
-    width: 435px;
+    width: 500px;
+    height: 100px;
+    margin-top: 25px;
     margin-left: 15px;
+    h2{
+        height: 30px;
+        color: $textColor;
+        padding-left: 10px;
+        display: inline;
+    }
+    button{
+        float: right;
+        margin-top: 25px;
+        margin-right: 15px;
+        width: 150px;
+        height: 50px;
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+        }
+    }
+    button:hover {
+        background-color: $darkWhite;
+        color: $textColor;
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+        }
+    }
+}
+
+.restraunt-title{
+    background-image: linear-gradient(to right, $secondaryColor, $thirdColor);
+    width: 100%;
+    height: 75px;
     text-align: center;
+    color: $textColor;
+    h2{
+        font-size: 40px;
+    }
+}
+
+.bio-review{
+    display: flex;
+    justify-content: space-between;
+    .restraunt-bio{
+        background-color: $thirdColor;
+        width: 600px;
+        height: 400px;
+        margin-top: 25px;
+        margin-left: 25px;
+        text-align: center;
+        p{
+            background-color: $textColor;
+            color: $thirdColor;
+            width: 550px;
+            margin-left: 25px;
+            margin-right: 0;
+        }
+    }
+    
+    .user-reviews{
+        li{
+            list-style-type: none;
+        }
+    }
+
+    .review{
+        background-color: $secondaryColor;
+        width: 675px;
+        height: 150px;
+        float: right;
+        margin-right: 50px;
+        margin-top: 25px;
+        display: block;
+    }
+    h3{
+        margin-left: 25px;
+        color: $thirdColor;
+    }
     p{
         background-color: $textColor;
-        color: $thirdColor;
-        width: 395px;
-        padding: 10px;
-        padding-right: .01px;
-        margin-top: 15px;
+        margin-left: 80px;
+        margin-right: 108px;
+        padding: 5px;
     }
 }
 

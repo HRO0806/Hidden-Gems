@@ -1,10 +1,15 @@
- <div class="make-post">
-    <form class="post-form">
-        <div class="text-enter">
-            <label for="location">Post</label>
-            <textarea type="text" id="post"></textarea>
-            <button class="post-button" type="button">Post</button>
+       <div class="post-page-content">
+        <div class="search-bar">
+            <form>
+                <textarea></textarea>
+                <button type="button">Search</button>
+            </form>
         </div>
-    </form>
-</div>
-<script type="text/javascript" src="./javascript/post.js"></script>
+        <ul>
+            {{#each}}
+            <li>
+                {{> restraunts}}
+            </li>
+            {{/each}}
+        </ul>        
+    </div>

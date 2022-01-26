@@ -13,4 +13,8 @@ router.get('/post', (req, res) => {
     res.render('post')
 });
 
+router.get('/privacy', (req, res) => {
+    res.render('privacy')
+})
+
 module.exports = router;
