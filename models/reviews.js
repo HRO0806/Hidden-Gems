@@ -19,11 +19,8 @@ Reviews.init(
           model: 'user',
           key: 'id'
         }
-      },
-      date: {
-        type: DataTypes.date
-       
       }
+    
     },
     {
       sequelize,
