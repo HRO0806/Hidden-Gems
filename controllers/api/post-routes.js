@@ -1,11 +1,14 @@
+// const { post } = require('./user-routes');
 const router = require('express').Router();
-const { post } = require('./user-routes');
-const sequelize = require('sequelize');
-const getRestaurants = require('../../public/javascript/geocoder');
+const sequelize = require('../../config/connection');
+const res = require('express/lib/response');
+const bodyParser = require('body-parser');
 
-router.post('/', (req, res) => {
-   const userCoords = req.body;
-   console.log(getRestaurants(userCoords));
-});
+
+
+
+router.use(bodyParser.json()); // for parsing application/json
+
+
 
 module.exports = router;

@@ -20,7 +20,6 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
-    
   })
     .then(dbUserData => {
       if (!dbUserData) {
