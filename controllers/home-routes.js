@@ -30,6 +30,10 @@ router.get('/privacy', (req, res) => {
     res.render('privacy')
 });
 
+router.get('/reviews', (req, res) => {
+  res.render('reviews')
+});
+
 router.post('/saveLocation', (req, res) => {
     const restaurantData = req.body;
     console.log(restaurantData);
