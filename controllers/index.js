@@ -5,6 +5,7 @@ router.use('/api', apiRoutes);
 
 //const postRoutes = require('./post-routes');
 const homeRoutes = require('./home-routes.js');
+// const userRoutes = require('./user-routes.js');
 
 router.use('/', homeRoutes);
 
