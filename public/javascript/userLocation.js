@@ -55,7 +55,7 @@ if ('geolocation' in navigator) {
                 ]
                 
                 console.log(restaurantData);
-                $.post('/saveLocation', JSON.stringify(restaurantData));
+                $.post('/post', JSON.stringify(restaurantData));
             })
             .catch(err => {
                 console.error(err);

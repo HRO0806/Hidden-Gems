@@ -21,20 +21,23 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
   
-
-router.get('/post', (req, res) => {
-    res.render('post')
-});
-
 router.get('/privacy', (req, res) => {
     res.render('privacy')
 });
 
-router.post('/saveLocation', (req, res) => {
+router.get('/reviews', (req, res) => {
+  res.render('reviews')
+});
+
+router.get('/post', (req, res) => {
+  res.render('post')
+});
+
+router.post('/post', (req, res) => {
     const restaurantData = req.body;
     console.log(restaurantData);
-
-    res.render('post', restaurantData)
+    res.render('post', {
+      restaurants: restaurantData})
     res.status(200);
  });
 

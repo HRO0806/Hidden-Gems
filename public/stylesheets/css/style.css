@@ -206,7 +206,7 @@ body {
   .bio-review .user-reviews li {
     list-style-type: none; }
   .bio-review .review {
-    background-color: #1e6398;
+    background-image: linear-gradient(to right, #1e6398, #1f1f20);
     width: 675px;
     height: 150px;
     float: right;
