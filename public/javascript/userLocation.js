@@ -18,17 +18,34 @@ if ('geolocation' in navigator) {
             .then(data => {
                 console.log(data);
 
-                    data.data.forEach(rest => {
-                        if (rest.name && rest.rating && rest.address) {
-                            $('#restaurant-info').append(`        
+                data.data.forEach(rest => {
+                    // Checks if there are any undefined variables that we would use
+                    if (rest.name && rest.rating && rest.address && rest.photo.images.medium.url) {
+                        //  Appends the restaurant data to the html, creating cards for each restaurant
+                        $('#restaurant-info').append(`  
                         <li>
-                            <h2>${rest.name}</h2>
-                            <h3>${rest.rating}</h3>
-                            <h4>${rest.address}</h4>
+                            <div class="card bg-light  mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    <img src="${rest.photo.images.medium.url}" height="450" width="338" class="img-fluid rounded-start position-relative" alt="${rest.photo.caption}">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${rest.name}</h5>
+                                            <p class="card-text">${rest.address}</p>
+                                            <p class="card-text "><small class="text-muted">Rating: ${rest.rating}</small></p>
+                                            <div>
+                                                <p class="card-text d-flex bd-highlight mb-3" "><small class="text-muted me-auto p-2 bd-highlight">${rest.price_level}</small>  <a href="/post" class="btn btn-primary p-2 bd-highlight">Write a review</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>`
-                            )
-                        }
-                    })
+                        )
+                    }
+                })
             })
             .catch(err => {
                 console.error(err);
