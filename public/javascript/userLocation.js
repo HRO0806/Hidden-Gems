@@ -16,46 +16,30 @@ if ('geolocation' in navigator) {
                 return response.json();
             })
             .then(data => {
-                 restaurantData = [
-                     {
-                        title: data.data[0].name,
-                        address: data.data[0].address,
-                        rating: data.data[0].rating
-                    },
-                    {
-                        title: data.data[1].name,
-                        address: data.data[1].address,
-                        rating: data.data[1].rating
-                    },
-                    {
-                        title: data.data[2].name,
-                        address: data.data[2].address,
-                        rating: data.data[2].rating
-                    },
-                 {
-                        title: data.data[3].name,
-                        address: data.data[3].address,
-                        rating: data.data[3].rating
-                    },
-                    {
-                        title: data.data[4].name,
-                        address: data.data[4].address,
-                        rating: data.data[4].rating
-                    },
-                   {
-                        title: data.data[5].name,
-                        address: data.data[5].address,
-                        rating: data.data[5].rating
-                    },
-                   {
-                        title: data.data[6].name,
-                        address: data.data[6].address,
-                        rating: data.data[6].rating
-                    },
-                ]
+                console.log(data);
+                let restaurantData = []; 
+                
+                data.data.forEach(rest => {
+                    if(rest.name) {
+                        let restaurant = {
+                            title: rest.name,
+                            rating: rest.rating,
+                            address: rest.address
+                        }
+                        restaurantData.push(restaurant);
+                    }
+                })
                 
                 console.log(restaurantData);
-                $.post('/post', JSON.stringify(restaurantData));
+                //$.post('/post', restaurantData);
+                fetch('/post', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(restaurantData),
+                })
+                .then(response => response.json);
             })
             .catch(err => {
                 console.error(err);
