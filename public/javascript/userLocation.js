@@ -17,29 +17,18 @@ if ('geolocation' in navigator) {
             })
             .then(data => {
                 console.log(data);
-                let restaurantData = []; 
-                
-                data.data.forEach(rest => {
-                    if(rest.name) {
-                        let restaurant = {
-                            title: rest.name,
-                            rating: rest.rating,
-                            address: rest.address
+
+                    data.data.forEach(rest => {
+                        if (rest.name && rest.rating && rest.address) {
+                            $('#restaurant-info').append(`        
+                        <li>
+                            <h2>${rest.name}</h2>
+                            <h3>${rest.rating}</h3>
+                            <h4>${rest.address}</h4>
+                        </li>`
+                            )
                         }
-                        restaurantData.push(restaurant);
-                    }
-                })
-                
-                console.log(restaurantData);
-                //$.post('/post', restaurantData);
-                fetch('/post', {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(restaurantData),
-                })
-                .then(response => response.json);
+                    })
             })
             .catch(err => {
                 console.error(err);
