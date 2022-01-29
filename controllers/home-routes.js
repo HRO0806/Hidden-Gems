@@ -30,10 +30,11 @@ router.get('/reviews', (req, res) => {
 });
 
 router.get('/post', (req, res) => {
-  res.render('post')
+  res.render('post');
 });
 
 router.post('/post', (req, res) => {
+    console.log(req.body);
     const restaurantData = req.body;
     console.log(restaurantData);
     res.render('post', {

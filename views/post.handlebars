@@ -5,16 +5,14 @@
                 <button type="button">Search</button>
             </form>
         </div>
+        {{#if restaurants }}
         <ul>
-            {{#each restaurants}}
-            <li>
-                <div id="restraunt">
-                    <h2>{{restaurants.title}}</h2>
-                    <h3>{{restaurants.rating}}</h3>
-                    <h4>{{restaurants.address}}</h4>
-                    <button type="button">reviews</button>
-                </div>
-            </li>
+            {{log restaurants}}
+            {{log 'I work!'}}
+            {{#each restaurants as |restaurant|}}
+                {{log restaurant}}
+                {{> restaurant-single }}
             {{/each}}
-        </ul>        
+        </ul>
+        {{/if}}        
     </div>
