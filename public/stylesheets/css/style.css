@@ -1,6 +1,25 @@
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+
+}
+
 body {
   background-color: #ffffff;
   margin: 0; }
+
+  /* Bootstrap color override */
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #1e6398 !important;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Bootstrap end */
 
 .page-header {
   background-color: #cacaca;
@@ -205,8 +224,8 @@ body {
       margin-right: 0; }
   .bio-review .user-reviews li {
     list-style-type: none; }
-  .bio-review .review {
-    background-image: linear-gradient(to right, #1e6398, #1f1f20);
+ .bio-review .review {
+    /* background-image: linear-gradient(to right, #1e6398, #1f1f20); */
     width: 675px;
     height: 150px;
     float: right;
@@ -214,13 +233,9 @@ body {
     margin-top: 25px;
     display: block; }
   .bio-review h3 {
-    margin-left: 25px;
-    color: #1f1f20; }
-  .bio-review p {
-    background-color: #cacaca;
-    margin-left: 80px;
-    margin-right: 108px;
-    padding: 5px; }
+    margin-left: 25px; 
+    color: #1f1f20; } 
+
 
 .page-footer {
   background-color: #1e6398;
