@@ -6,7 +6,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 //import sequelize connection
 const sequelize = require('./config/connection');
-const axios = require('axios');
 const exphbs = require('express-handlebars');
 
 const app = express();
@@ -40,3 +39,4 @@ app.use(require('./controllers/'));
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+

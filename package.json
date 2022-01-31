@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/HRO0806/Hidden-Gems#readme",
   "dependencies": {
-    "axios": "^0.25.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.1",
     "connect-session-sequelize": "^7.1.2",

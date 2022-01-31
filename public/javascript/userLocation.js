@@ -9,7 +9,7 @@ if ('geolocation' in navigator) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-                "x-rapidapi-key": "4969704668msh8e43e445810c355p1b4d83jsn7d564529bba1"
+                "x-rapidapi-key": "d63b9a7298msh3a0a37290101a86p17ad1ejsnaae51064bad6"
             }
         })
             .then(response => {
@@ -19,8 +19,21 @@ if ('geolocation' in navigator) {
                 console.log(data);
 
                 data.data.forEach(rest => {
+                    // console.log(rest.photo.images)
+
+                    // if(typeof restPic === 'undefined') {
+                    //     restPic = `public/images/image_not_available.png`;
+                    //     picCaption = `Image not available`
+                    // } else {
+                    //     restPic = rest.photo.images.medium.url
+                    //     picCaption = rest.photo.caption
+
+                    // }
                     // Checks if there are any undefined variables that we would use
-                    if (rest.name && rest.rating && rest.address && rest.photo.images.medium.url) {
+                    if (rest.photo.images === undefined) {
+                        return;
+                    } else if (rest.name && rest.rating && rest.address) {
+
                         //  Appends the restaurant data to the html, creating cards for each restaurant
                         $('#restaurant-info').append(`  
                         <li>
@@ -44,6 +57,8 @@ if ('geolocation' in navigator) {
                             </div>
                         </li>`
                         )
+                    } else {
+                        return;
                     }
                 })
             })
