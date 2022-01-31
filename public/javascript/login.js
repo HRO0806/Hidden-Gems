@@ -40,7 +40,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/post');
+      document.location.replace('/login');
     } else {
        alert(document.location.replace('/login'));
      }
