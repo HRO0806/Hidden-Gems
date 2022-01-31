@@ -44,6 +44,7 @@ async function signupFormHandler(event) {
     } else {
        alert(document.location.replace('/login'));
      }
+
   }
 }
 
