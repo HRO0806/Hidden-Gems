@@ -9,7 +9,7 @@ if ('geolocation' in navigator) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-                "x-rapidapi-key": "4969704668msh8e43e445810c355p1b4d83jsn7d564529bba1"
+                "x-rapidapi-key": 'd63b9a7298msh3a0a37290101a86p17ad1ejsnaae51064bad6'
             }
         })
             .then(response => {
@@ -20,30 +20,25 @@ if ('geolocation' in navigator) {
 
                 data.data.forEach(rest => {
                     // Checks if there are any undefined variables that we would use
-                    if (rest.name && rest.rating && rest.address && rest.photo.images.medium.url) {
+                    if (rest.name && rest.rating && rest.address) {
                         //  Appends the restaurant data to the html, creating cards for each restaurant
-                        $('#restaurant-info').append(`  
+                        $('#restaurant-info').append(`
                         <li>
-                            <div class="card bg-light  mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                    <img src="${rest.photo.images.medium.url}" height="450" width="338" class="img-fluid rounded-start position-relative" alt="${rest.photo.caption}">
-                                    </div>
-
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${rest.name}</h5>
-                                            <p class="card-text">${rest.address}</p>
-                                            <p class="card-text "><small class="text-muted">Rating: ${rest.rating}</small></p>
-                                            <div>
-                                                <p class="card-text d-flex bd-highlight mb-3" "><small class="text-muted me-auto p-2 bd-highlight">${rest.price_level}</small>  <a href="/post" class="btn btn-primary p-2 bd-highlight">Write a review</a></p>
-                                            </div>
+                        <div class="restaurant-card">
+                            <div>
+                                <div class="rest-container">
+                                    <div>
+                                        <h5>${rest.name}</h5>
+                                        <p>${rest.address}</p>
+                                        <p>Rating: ${rest.rating}</p>
+                                        <div>
+                                            <p class="price">${rest.price_level}</p> 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </li>`
-                        )
+                    </li>`
+                    )
                     }
                 })
             })

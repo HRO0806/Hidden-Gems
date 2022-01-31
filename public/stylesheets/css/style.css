@@ -1,25 +1,6 @@
-html, body {
-  min-height: 100%;
-  min-width: 100%;
-
-}
-
 body {
   background-color: #ffffff;
   margin: 0; }
-
-  /* Bootstrap color override */
-  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #1e6398 !important;
-}
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  width: 100%;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
-/* Bootstrap end */
 
 .page-header {
   background-color: #cacaca;
@@ -124,6 +105,8 @@ body {
     height: 320px;
     width: 100%;
     text-align: center;
+    position: relative;
+    top: -30px;
     margin-left: 0;
     margin-right: 0; }
     .login-signup-form #secure-info p {
@@ -142,15 +125,6 @@ body {
     .login-signup-form button:hover a {
       color: #cacaca;
       text-decoration: none; }
-
-.post-page-content {
-  display: flex;
-  justify-content: space-between;
-  justify-content: space-around;
-  flex-direction: row-reverse;
-  flex-wrap: wrap; }
-  .post-page-content ul {
-    list-style-type: none; }
 
 .search-bar {
   float: right;
@@ -197,15 +171,6 @@ body {
       color: #1f1f20;
       text-decoration: none; }
 
-.restraunt-title {
-  background-image: linear-gradient(to right, #1e6398, #1f1f20);
-  width: 100%;
-  height: 75px;
-  text-align: center;
-  color: #cacaca; }
-  .restraunt-title h2 {
-    font-size: 40px; }
-
 .bio-review {
   display: flex;
   justify-content: space-between; }
@@ -224,8 +189,8 @@ body {
       margin-right: 0; }
   .bio-review .user-reviews li {
     list-style-type: none; }
- .bio-review .review {
-    /* background-image: linear-gradient(to right, #1e6398, #1f1f20); */
+  .bio-review .review {
+    background-color: #1e6398;
     width: 675px;
     height: 150px;
     float: right;
@@ -233,9 +198,35 @@ body {
     margin-top: 25px;
     display: block; }
   .bio-review h3 {
-    margin-left: 25px; 
-    color: #1f1f20; } 
+    margin-left: 25px;
+    color: #1f1f20; }
+  .bio-review p {
+    background-color: #cacaca;
+    margin-left: 80px;
+    margin-right: 108px;
+    padding: 5px; }
 
+.restaurant-list li {
+  list-style-type: none;
+  width: 400px; }
+
+.restaurant-card {
+  background-color: #cacaca;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #1f1f20;
+  border: 1px solid #737373;
+  border-radius: 7px; }
+  .restaurant-card h5 {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .restaurant-card p {
+    font-size: 20px; }
+  .restaurant-card .rest-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
 
 .page-footer {
   background-color: #1e6398;
@@ -243,17 +234,43 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  justify-content: space-around;
   margin-top: 0;
   margin-bottom: auto;
-  padding-bottom: px;
   width: 100%;
   position: fixed;
   bottom: 0; }
   .page-footer p {
-    display: inline; }
+    display: inline;
+    margin-left: 15px; }
   .page-footer a {
     text-decoration: none;
     color: white; }
+
+@media screen and (max-width: 570px) {
+  .page-header {
+    width: 100%; }
+    .page-header h1 {
+      font-size: 25px; }
+    .page-header button {
+      width: 57px;
+      height: 27px;
+      padding: 7px;
+      margin-bottom: 3px; }
+
+  .restaurant-card {
+    width: 260px;
+    text-align: center; }
+
+  .login-signup-form {
+    margin-left: -80px;
+    height: 400px;
+    text-align: center; }
+    .login-signup-form .text-input {
+      width: 200px; }
+    .login-signup-form #secure-info {
+      position: relative;
+      top: 20px; }
+      .login-signup-form #secure-info p {
+        font-size: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

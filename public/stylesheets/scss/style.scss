@@ -137,6 +137,8 @@ body {
         height: 320px;
         width: 100%;;
         text-align: center;
+        position: relative;
+        top: -30px;
         margin-left: 0;
         margin-right: 0;
         p{
@@ -161,17 +163,6 @@ body {
             color: $textColor;
             text-decoration: none;  
         }
-    }
-}
-
-.post-page-content{
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    ul{
-        list-style-type: none;
     }
 }
 
@@ -230,17 +221,6 @@ body {
     }
 }
 
-.restraunt-title{
-    background-image: linear-gradient(to right, $secondaryColor, $thirdColor);
-    width: 100%;
-    height: 75px;
-    text-align: center;
-    color: $textColor;
-    h2{
-        font-size: 40px;
-    }
-}
-
 .bio-review{
     display: flex;
     justify-content: space-between;
@@ -287,24 +267,87 @@ body {
     }
 }
 
+.restaurant-list{
+    li{
+        list-style-type: none;
+        width: 400px;
+    }
+}
+
+.restaurant-card{
+    background-color: $textColor;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: $thirdColor;
+    border: 1px solid $darkWhite;
+    border-radius: 7px;
+    h5{
+        font-size: 35px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .rest-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+
 .page-footer {
     background-color: $secondaryColor;
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    justify-content: space-around;
     margin-top: 0;
     margin-bottom: auto;
-    padding-bottom: px;
     width: 100%;
     position: fixed;
     bottom: 0;
     p{
         display: inline;
+        margin-left: 15px;
     }
     a{
         text-decoration: none;
         color: white;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .page-header{
+        width: 100%;
+        h1{
+            font-size: 25px;
+        }
+        button{
+            width: 57px;
+            height: 27px;
+            padding: 7px;
+            margin-bottom: 3px;
+        }
+    }
+    .restaurant-card{
+        width: 260px;
+        text-align: center;
+    }
+    .login-signup-form{
+        margin-left: -80px;
+        height:400px;
+        text-align: center;
+        .text-input{
+            width: 200px;
+        }
+        #secure-info{
+            position: relative;
+            top: 20px;
+            p{
+                font-size: 20px;
+            }
+        }
     }
 }
