@@ -6,7 +6,7 @@ function post(postedContent, postContents) {
     document.body.append(postedContent);
 };
 
-button.addEventListener("click", function() {
+button.addEventListener("click", () => {
     let text = document.querySelector("#post").value;
     let userPost = document.createElement("div");
     
