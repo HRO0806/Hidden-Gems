@@ -9,53 +9,38 @@ if ('geolocation' in navigator) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-                "x-rapidapi-key": "4969704668msh8e43e445810c355p1b4d83jsn7d564529bba1"
+                "x-rapidapi-key": 'd63b9a7298msh3a0a37290101a86p17ad1ejsnaae51064bad6'
             }
         })
             .then(response => {
                 return response.json();
             })
             .then(data => {
-                 restaurantData = [
-                     {
-                        title: data.data[0].name,
-                        address: data.data[0].address,
-                        rating: data.data[0].rating
-                    },
-                    {
-                        title: data.data[1].name,
-                        address: data.data[1].address,
-                        rating: data.data[1].rating
-                    },
-                    {
-                        title: data.data[2].name,
-                        address: data.data[2].address,
-                        rating: data.data[2].rating
-                    },
-                 {
-                        title: data.data[3].name,
-                        address: data.data[3].address,
-                        rating: data.data[3].rating
-                    },
-                    {
-                        title: data.data[4].name,
-                        address: data.data[4].address,
-                        rating: data.data[4].rating
-                    },
-                   {
-                        title: data.data[5].name,
-                        address: data.data[5].address,
-                        rating: data.data[5].rating
-                    },
-                   {
-                        title: data.data[6].name,
-                        address: data.data[6].address,
-                        rating: data.data[6].rating
-                    },
-                ]
-                
-                console.log(restaurantData);
-                $.post('/saveLocation', JSON.stringify(restaurantData));
+                console.log(data);
+
+                data.data.forEach(rest => {
+                    // Checks if there are any undefined variables that we would use
+                    if (rest.name && rest.rating && rest.address) {
+                        //  Appends the restaurant data to the html, creating cards for each restaurant
+                        $('#restaurant-info').append(`
+                        <li>
+                        <div class="restaurant-card">
+                            <div>
+                                <div class="rest-container">
+                                    <div>
+                                        <h5>${rest.name}</h5>
+                                        <p>${rest.address}</p>
+                                        <p>Rating: ${rest.rating}</p>
+                                        <div>
+                                            <p class="price">${rest.price_level}</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>`
+                    )
+                    }
+                })
             })
             .catch(err => {
                 console.error(err);
