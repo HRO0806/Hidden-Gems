@@ -233,7 +233,7 @@ body {
   color: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 0;
   margin-bottom: auto;
   width: 100%;
