@@ -13,12 +13,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/api/posts');
-      return;
-    }
+    // if (req.session.loggedIn) {
+    //   res.redirect('post');
+
+    // } else {
+      res.render('login')
+    // }
   
-    res.render('login');
+    
   });
   
 router.get('/privacy', (req, res) => {

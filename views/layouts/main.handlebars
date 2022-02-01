@@ -1,9 +1,9 @@
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./stylesheets/css/style.css" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/css/style.css"/>
     <title>Hidden Gems</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
       </div>
     </header>
     {{{body}}}
-    <footer class="page-footer ">
+    <footer class="page-footer">
       <p><a
           href="https://www.ebay.com/itm/Crafting-with-Cat-Hair-Cute-Handicrafts-to-Make-with-Your-Cat-By-Tsutaya-K/322539549387?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338181172&customid=&toolid=10001&mkevt=1"
           target="_blank"
@@ -34,11 +34,16 @@
         <p><a href="/login">Login</a></p>
         {{/if}}
     </footer>
-    <script type="text/javascript" src="/javascript/login.js"></script>
-    <script type="text/javascript" src="/javascript/logout.js"></script>
-    <script type="text/javascript" src="./javascript/userLocation.js"></script>
-    <script
+        <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{#if loggedIn}}
+    <script type="text/javascript" src="/javascript/logout.js"></script>
+        {{else}}
+    <script type="text/javascript" src="/javascript/login.js"></script>
+        {{/if}}
+    <script type="text/javascript" src="./javascript/userLocation.js"></script>
   </body>
 </html>
