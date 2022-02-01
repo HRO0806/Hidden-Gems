@@ -1,48 +1,66 @@
 <div class="login-signup-form">
-        <div class='login'>
-            <form class="login-form">
-                <div>
-                    <label for="email-login">email:</label>
-                    <input type="text" id="email-login" class="text-input"/>
-                </div>
-                <div>
-                    <label for="password-login" class="input">password:</label>
-                    <input type="password" id="password-login" class="input text-input button-space"/>
-                </div>
-                <div class="input">
-                    {{#if loggedIn}}
-                    <button type="submit" class="input"><a href="/post">Login</a></button>
-                    {{else}}
-                    <button type="submit" class="input"><a href="/login">Login</a></button>
-                    {{/if}}
-                </div>
-            </form>
-          </div>
-          
-          <div class='sign-up'>
-            <form class="signup-form">
-                <div>
-                    <label for="username-signup" class="input">username:</label>
-                    <input type="text" id="username-signup" class="input text-input"/>
-                </div>
-                <div>
-                    <label for="email-signup" class="input">email:</label>
-                    <input type="text" id="email-signup" class="input text-input"/>
-                </div>
-                <div>
-                    <label for="password-signup" class="input">password:</label>
-                    <input type="password" id="password-signup" class="text-input input button-space"/>
-                </div>
-                <div>
-                    <button type="submit" class="input">Signup</button>
-                </div>
-            </form>
-        </div>
-        <div id="secure-info">
-            <p>No need to worry!<br> 
-            you information is secure.</p>
-            <img id="thumbs-up" src="./images/jim.gif">
-        </div>  
-          
-    </div>
-    <script src="./javascript/login.js"></script>
+  <div class="login">
+    <form class="login-form">
+      <div>
+        <label for="email-login">email:</label>
+        <input type="text" id="email-login" class="text-input" />
+      </div>
+      <div>
+        <label for="password-login" class="input">password:</label>
+        <input
+          type="password"
+          id="password-login"
+          class="input text-input button-space"
+        />
+      </div>
+      <div class="input">
+        {{#if loggedIn}}
+          <button type="submit" class="input"><a href="/post">View Restaurants</a></button>
+          <button type="submit" id="logout" class="input"><a
+              href="/login"
+            >Logout</a></button>
+        {{else}}
+          <button type="submit" id="login" class="input"><a
+              href="/post"
+            >Login</a></button>
+        {{/if}}
+      </div>
+    </form>
+  </div>
+
+  <div class="sign-up">
+    <form class="signup-form">
+      <div>
+        <label for="username-signup" class="input">username:</label>
+        <input type="text" id="username-signup" class="input text-input" />
+      </div>
+      <div>
+        <label for="email-signup" class="input">email:</label>
+        <input type="text" id="email-signup" class="input text-input" />
+      </div>
+      <div>
+        <label for="password-signup" class="input">password:</label>
+        <input
+          type="password"
+          id="password-signup"
+          class="text-input input button-space"
+        />
+      </div>
+      <div>
+        <button type="submit" id="#signup" class="input"><a
+              href="/post"
+            >Signup</a></button>
+        
+
+      </div>
+    </form>
+  </div>
+  <div id="secure-info">
+    <p>No need to worry!<br />
+      you information is secure.</p>
+    <img id="thumbs-up" src="./images/jim.gif" />
+  </div>
+
+</div>
+       
+
