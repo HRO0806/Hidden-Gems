@@ -9,7 +9,7 @@ if ('geolocation' in navigator) {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-                "x-rapidapi-key": 'd63b9a7298msh3a0a37290101a86p17ad1ejsnaae51064bad6'
+                "x-rapidapi-key": 'c8f5f64b40mshdd0462e4ea55d39p1828e2jsn1e3bf14d32b1'
             }
         })
             .then(response => {
